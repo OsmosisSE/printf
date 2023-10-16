@@ -46,11 +46,8 @@ int print_number(va_list);
 int print_octa(va_list args);
 int print_hexa(va_list args);
 int print_heXa(va_list args);
-
 int print_heXa(va_list list);
-
 int hexa_check(int num, char x);
-
 
 /* custom convertion specifier handlers */
 int print_bin(va_list args);
