@@ -44,7 +44,7 @@ int print_bin(va_list args)
 }
 
 /**
- * print_octal - Prints the numeric representation of a number in base 8
+ * print_octa - Prints the numeric representation of a number in base 8
  * @args: list of all the arguments passed to the program
  * Return: len
 */
