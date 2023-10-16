@@ -11,8 +11,8 @@ int _printf(const char *format, ...)
 	int result;
 	conver_t func[] = {{"c", print_char}, {"s", print_string},
 	{"%", print_percent}, {"d", print_int}, {"i", print_int},
-	{"u", unsigned_int}, {"b", print_binary}, {"o", print_octal},
-	{"x", print_hex}, {"X", print_heX}, {"r", print_reversed},
+	{"u", unsigned_int}, {"b", print_bin}, {"o", print_octa},
+	{"x", print_hexa}, {"X", print_heXa}, {"r", print_reversed},
 	{"R", print_rot13}, {NULL, NULL}};
 	va_list args;
 

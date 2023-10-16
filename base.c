@@ -126,7 +126,7 @@ int print_hexa(va_list args)
 		n_num = num % 16;
 		if (n_num > 9)
 		{
-			n_num = hex_check(n_num, 'x');
+			n_num = hexa_check(n_num, 'x');
 			hex_rep[len] = n_num;
 		}
 		else
@@ -170,7 +170,7 @@ int print_heXa(va_list args)
 		n_num = num % 16;
 		if (n_num > 9)
 		{
-			n_num = hex_check(n_num, 'X');
+			n_num = hexa_check(n_num, 'X');
 			hex_rep[len] = n_num;
 		}
 		else
