@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_binary - Converts a number from decimal to binary
+ * print_bin - Converts a number from decimal to binary
  * @args: List of arguments
  * Return: The length of the number printed
  */
-int print_binary(va_list args)
+int print_bin(va_list args)
 {
 	unsigned int num;
 	int i, n_len;
@@ -48,7 +48,7 @@ int print_binary(va_list args)
  * @args: list of all the arguments passed to the program
  * Return: len
 */
-int print_octal(va_list args)
+int print_octa(va_list args)
 {
 	int len;
 	unsigned int num;
@@ -82,12 +82,12 @@ int print_octal(va_list args)
 }
 
 /**
- * hex_check - checks which hexadecimal function calling it
+ * hexa_check - checks which hexadecimal function calling it
  * @num : integer to be converted to characters
  * @x: tells which hex function is calling it
  * Return: ASCII value for a character
 */
-int hex_check(int num, char x)
+int hexa_check(int num, char x)
 {
 	char *hex = "abcdef";
 	char *heX = "ABCDEF";
@@ -101,11 +101,11 @@ int hex_check(int num, char x)
 }
 
 /**
- * print_hex - Prints a representation of a decinal number in base 16 lowercase
+ * print_hexa - Print a representation of a decimal number in base 16 lowercase
  * @args: List of arguments passed to the function
  * Return: Number of characters printed
 */
-int print_hex(va_list args)
+int print_hexa(va_list args)
 {
 	unsigned int num;
 	int len, n_num;
@@ -145,11 +145,11 @@ int print_hex(va_list args)
 
 
 /**
- * print_heX - Prints a representation of a decinal number in base 16 uppercase
+ * print_heXa - Print a representation of a decimal number in base 16 uppercase
  * @args: List of arguments passed to the function
  * Return: Number of characters printed
 */
-int print_heX(va_list args)
+int print_heXa(va_list args)
 {
 	unsigned int num;
 	int len, n_num;
