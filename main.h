@@ -73,4 +73,6 @@ void write_base(char *str);
 int print_hex_helper(unsigned long int num);
 char *rev_string(char *);
 
+int create_hexa(char[], char, int);
+
 #endif

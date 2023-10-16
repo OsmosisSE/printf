@@ -1,4 +1,4 @@
-#include "main.h";
+#include "main.h"
 
 /**
  * print_non - prints non printable characters
@@ -17,7 +17,7 @@ int print_non(va_list args)
 		return (write(1, "(null)", 6));
 	}
 
-	for (i = 0; s[i] != '\0', i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if(s[i] >= 32 && s[i] < 127)
 		{
