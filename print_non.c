@@ -1,4 +1,4 @@
-#inclue "main.h"
+#include "main.h"
 
 /**
  * print_non - prints non printable characters
