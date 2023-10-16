@@ -1,43 +1,32 @@
 #include "main.h"
 
 /**
- * _printf - function that produces output accoridng to a format
- * @format: format acording to which argument will be printed
- * Return: return numbers of characters printed
+ * _printf - Produces output according to a format.
+ * @format: The format string.
+ *
+ * Return: The number of characters printed (excluding the null byte).
  */
-
 int _printf(const char *format, ...)
 {
-	int count = 0;
+	int printed_chars = 0;
 	va_list args;
-
-	if (format == NULL)
-		return (-1);
+	char c;
 
 	va_start(args, format);
 
-	while (*format)
+	while (format && format[printed_chars])
 	{
-		if (*format != '%')
+		if (format[printed_chars] != '%')
 		{
-			write(1, format, 1);
+			write(1, &format[printed_chars], 1);
 		}
-
-		format++;
+		else
+		{
+			printed_chars += handle_specifier(&format[printed_chars + 1], args);
+		}
+		printed_chars++;
 	}
 
-	return (count);
-}
-
-/**
- * print_buffer - Prints the contents of the buffer
- * @buffer: Array of chars
- * @buff_ind: Index at which to add next char, represents the length.
- */
-void print_buffer(char buffer[], int *buff_ind)
-{
-	if (*buff_ind > 0)
-		write(1, &buffer[0], *buff_ind);
-
-	*buff_ind = 0;
+	va_end(args);
+	return (printed_chars);
 }
