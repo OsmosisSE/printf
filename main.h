@@ -1,9 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
-
-#include <stdio.h>
 #include <stdarg.h>
-#include <string.h>
+#include <stdio.h>
 #include <unistd.h>
 
 #define UNUSED(x) (void)(x)
@@ -32,6 +30,7 @@ struct fmt
 	int (*fn)(va_list, char[], int, int, int, int);
 };
 
+
 /**
  * typedef struct fmt fmt_t - Struct op
  *
@@ -41,8 +40,8 @@ struct fmt
 typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
-int handle_print(const char *fmt, int *i, va_list list, char buffer[], int flags, int width, int precision, int size);
-ssize_t write(int fd, const void *buf, size_t count);
+int handle_print(const char *fmt, int *i,
+va_list list, char buffer[], int flags, int width, int precision, int size);
 
 /****************** FUNCTIONS ******************/
 
@@ -67,7 +66,9 @@ int print_hexadecimal(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int print_hexa_upper(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-int print_hexa(va_list types, char map_to[], char buffer[], int flags, char flag_ch, int width, int precision, int size);
+
+int print_hexa(va_list types, char map_to[],
+char buffer[], int flags, char flag_ch, int width, int precision, int size);
 
 /* Function to print non printable characters */
 int print_non_printable(va_list types, char buffer[],
@@ -113,4 +114,4 @@ int is_digit(char);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
-#endif
+#endif /* MAIN_H */
