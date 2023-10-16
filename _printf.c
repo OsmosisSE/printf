@@ -1,32 +1,27 @@
+#include <stdio.h>
+#include <stdarg.h>
 #include "main.h"
-
 /**
- * _printf - Produces output according to a format.
- * @format: The format string.
+ * _printf - receives input with parameters and print a formatted string
+ * @format: format acording to which argument will be printed
  *
- * Return: The number of characters printed (excluding the null byte).
+ * Return: The total of character printed
  */
 int _printf(const char *format, ...)
 {
-	int printed_chars = 0;
+	int result;
+	conver_t func[] = {{"c", print_char}, {"s", print_string},
+	{"%", print_percent}, {"d", print_int}, {"i", print_int},
+	{"u", unsigned_int}, {"b", print_binary}, {"o", print_octal},
+	{"x", print_hex}, {"X", print_heX}, {"r", print_reversed},
+	{"R", print_rot13}, {NULL, NULL}};
 	va_list args;
-	char c;
+
+	if (format == NULL)
+		return (-1);
 
 	va_start(args, format);
-
-	while (format && format[printed_chars])
-	{
-		if (format[printed_chars] != '%')
-		{
-			write(1, &format[printed_chars], 1);
-		}
-		else
-		{
-			printed_chars += handle_specifier(&format[printed_chars + 1], args);
-		}
-		printed_chars++;
-	}
-
+	result = process(format, func, args);
 	va_end(args);
-	return (printed_chars);
+	return (result);
 }
