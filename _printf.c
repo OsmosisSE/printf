@@ -13,7 +13,8 @@ int _printf(const char *format, ...)
 	{"%", print_percent}, {"d", print_int}, {"i", print_int},
 	{"u", unsigned_int}, {"b", print_bin}, {"o", print_octa},
 	{"x", print_hexa}, {"X", print_heXa}, {"r", print_reversed},
-	{"R", print_rot13}, {"S", print_non}, {NULL, NULL}};
+	{"R", print_rot13}, {"S", print_non},
+	{"p", print_pointer_address}, {NULL, NULL}};
 	va_list args;
 
 	if (format == NULL)
