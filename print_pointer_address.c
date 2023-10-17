@@ -20,6 +20,8 @@ int print_pointer_address(va_list args)
 	if (!p)
 		return (write(1, "(null)", 6));
 
+	buffer[BUFF_SIZE - 1] = '\0'; /* last elemrnt buffer array */
+
 	p_address = (unsigned long)p;
 
 	for (i = 2; p_address > 0; i++)
@@ -33,5 +35,5 @@ int print_pointer_address(va_list args)
 	buffer[--j] = 'x';
 	buffer[--j] = '0';
 
-	return (write(1, buffer, i));
+	return (write(1, &buffer[j], BUFF_SIZE - 1 - j));
 }
