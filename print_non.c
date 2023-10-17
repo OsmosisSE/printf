@@ -1,9 +1,11 @@
-#include "main.h";
+#include "main.h"
 
 /**
  * print_non - prints non printable characters
+ *
  * @args: list of arguments
- * return: all the non_printable characters
+ *
+ * Return: hex value of all the non_printable characters
 */
 
 int print_non(va_list args)
@@ -17,16 +19,12 @@ int print_non(va_list args)
 		return (write(1, "(null)", 6));
 	}
 
-	for (i = 0; s[i] != '\0', i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if(s[i] >= 32 && s[i] < 127)
-		{
+		if (s[i] >= 32 && s[i] < 127)
 			buffer[i + adj_index] = s[i];
-		} else {
+		else
 			adj_index += create_hexa(buffer, s[i], i + adj_index);
-		}
-
-		i++;
 	}
 
 	buffer[i + adj_index] = '\0';
@@ -36,10 +34,12 @@ int print_non(va_list args)
 
 /**
  * create_hexa - cerates the hexa dcimal code of characters
+ *
  * @buffer: buffer array of characters
- * @ascii: ascii value 
+ * @ascii: ascii value
  * @i: hexa creation index in buffer
- * return: hexa code
+ *
+ * Return: hexa code
 */
 
 int create_hexa(char buffer[], char ascii, int i)
