@@ -1,12 +1,11 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* header and library files */
+/* Header and library files */
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include <ctype.h>
 
 /* Buffer */
 #define UNUSED(x) (void)(x)
@@ -23,6 +22,7 @@
 #define S_LONG 2
 #define S_SHORT 1
 
+/* Structure */
 /**
  * struct fmt - Struct op
  *
@@ -35,7 +35,6 @@ struct fmt
 	int (*fn)(va_list, char[], int, int, int, int);
 };
 
-/* Structures */
 /**
  * typedef struct fmt fmt_t - Struct op
  *
@@ -50,7 +49,6 @@ int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
 
 /* FUNCTIONS */
-
 /* Funtions to print chars and strings */
 int print_char(va_list types, char buffer[],
 	int flags, int width, int precision, int size);

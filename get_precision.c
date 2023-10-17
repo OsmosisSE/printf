@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * get_precision - Calculates the precision for printing
- * @format: Formatted string in which to print the arguments
- * @i: List of arguments to be printed.
- * @list: list of arguments.
+ * get_precision - Extracts the precision for non-custom conversion specifiers.
+ * @format: Formatted string.
+ * @i: Pointer to the current position in the format string.
+ * @list: List of arguments.
  *
- * Return: Precision.
+ * Return: The extracted precision or -1 if not found.
  */
 int get_precision(const char *format, int *i, va_list list)
 {
@@ -19,18 +19,17 @@ int get_precision(const char *format, int *i, va_list list)
 	precision = 0;
 	curr_i++;
 
-	while (isdigit(format[curr_i]))
+	while (format[curr_i] >= '0' && format[curr_i] <= '9')
 	{
-			precision *= 10;
-			precision += format[curr_i] - '0';
-			curr_i++;
+		precision = (precision * 10) + (format[curr_i] - '0');
+		curr_i++;
 	}
 
 	if (format[curr_i] == '*')
-		{
-			curr_i++;
-			precision = va_arg(list, int);
-		}
+	{
+		curr_i++;
+		precision = va_arg(list, int);
+	}
 
 	*i = curr_i - 1;
 
