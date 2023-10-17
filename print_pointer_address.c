@@ -11,42 +11,29 @@
 
 int print_pointer_address(va_list args)
 {
-	char *hex_address; /* pointer hex address */
-	int counter = 0; /* track number of hex characters */
-	unsigned long int ptr = va_arg(args, unsigned long int);
+	int i, j = BUFF_SIZE - 2; /* i-length(address), j-index(addres) */
+	void *p = va_arg(args, void *);
+	unsigned long p_address;
+	char buffer[BUFF_SIZE];
+	char hex[] = "0123456789abcdef";
 
-	if (!ptr)
+	if (!p)
 		return (write(1, "(null)", 6));
 
-	hex_address = get_pointer_value(ptr);
+	buffer[BUFF_SIZE - 1] = '\0'; /* last elemrnt buffer array */
 
-	counter = 2 + _strlen(hex_address);
+	p_address = (unsigned long)p;
 
-	write(1, "0x", 2);
-	write(1, &hex_address, counter - 2);
+	for (i = 2; p_address > 0; i++)
+	{
+		buffer[j--] = hex[p_address % 16];
+		p_address = p_address / 16;
+	}
 
+	j++;
 
-	return (counter);
-}
+	buffer[--j] = 'x';
+	buffer[--j] = '0';
 
-/**
- * get_pointer_value - gets the value of a pointer in hex fmt
- *
- * @pointer: pointer to consider
- *
- * Return: pointer value in hex format
-*/
-char *get_pointer_value(unsigned int pointer)
-{
-	char *p_address, buffer[BUFF_SIZE];
-	char hexa[] = "0123456789abcdef";
-
-	p_address = &buffer[BUFF_SIZE - 1];
-	*p_address = '\0';
-
-	/* pointer address[] is filled from the last element*/
-	for (; pointer != 0; pointer /= 16)
-		*--p_address = hexa[pointer % 16];
-
-	return (p_address);
+	return (write(1, &buffer[j], BUFF_SIZE - 1 - j));
 }
