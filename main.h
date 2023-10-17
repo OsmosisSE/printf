@@ -46,21 +46,17 @@ int print_number(va_list);
 int print_octa(va_list args);
 int print_hexa(va_list args);
 int print_heXa(va_list args);
-<<<<<<< HEAD
-=======
-/* task 6 */
-int print_pointer_address(va_list args);
-
->>>>>>> cf0d57ad06fbcd8db9bcb06adcfe55c107e2c7c8
 int print_heXa(va_list list);
 int hexa_check(int num, char x);
+
+/* task 6 */
+int print_pointer_address(va_list args);
 
 /* custom convertion specifier handlers */
 int print_bin(va_list args);
 int print_pointer(va_list);
 int print_reversed(va_list);
 int print_rot13(va_list);
-
 
 /* print characters that are non-printable */
 int print_non(va_list);
