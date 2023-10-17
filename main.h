@@ -68,7 +68,7 @@ int unsigned_int(va_list);
 int print_exclusive_string(const char *format, ...);
 int print_unsigned_int(unsigned int);
 
-int get_pointer_value(unsigned int);
+char *get_pointer_value(unsigned int);
 
 /* helpers */
 char *_memcpy(char *dest, char *src, unsigned int n);
