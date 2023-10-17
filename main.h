@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* Header and library files */
+/* Header files */
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -86,7 +86,7 @@ int print_pointer(va_list types, char buffer[],
 int get_flags(const char *format, int *i);
 int get_width(const char *format, int *i, va_list list);
 int get_precision(const char *format, int *i, va_list list);
-int get_size(const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 char *format, int *i);
+int get_size(const char *format, int *i);
 
 /*Function to print string in reverse*/
 int print_reverse(va_list types, char buffer[],
