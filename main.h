@@ -46,6 +46,12 @@ int print_number(va_list);
 int print_octa(va_list args);
 int print_hexa(va_list args);
 int print_heXa(va_list args);
+<<<<<<< HEAD
+=======
+/* task 6 */
+int print_pointer_address(va_list args);
+
+>>>>>>> cf0d57ad06fbcd8db9bcb06adcfe55c107e2c7c8
 int print_heXa(va_list list);
 int hexa_check(int num, char x);
 
@@ -63,12 +69,15 @@ int unsigned_int(va_list);
 int print_exclusive_string(const char *format, ...);
 int print_unsigned_int(unsigned int);
 
+char *get_pointer_value(unsigned int);
+
 /* helpers */
 char *_memcpy(char *dest, char *src, unsigned int n);
 unsigned int base_len(unsigned int, int);
 void write_base(char *str);
 int print_hex_helper(unsigned long int num);
 char *rev_string(char *);
+int _strlen(char *s);
 
 int create_hexa(char[], char, int);
 
