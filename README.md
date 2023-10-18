@@ -199,11 +199,14 @@ Our main files will include your main header file (`main.h`): `#include main.h`
 
 You might want to look at the `gcc` flag `-Wno-format` when testing with your `_printf` and the standard `printf`. Example of test file that you could use:
 
+```bash
 alex@ubuntu:~/c/printf$ cat main.c 
 #include <limits.h>
 #include <stdio.h>
 #include "main.h"
+```
 
+```c
 /**
  * main - Entry point
  *
@@ -244,6 +247,9 @@ int main(void)
     printf("Unknown:[%r]\n");
     return (0);
 }
+```
+
+```bash
 alex@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
 alex@ubuntu:~/c/printf$ ./printf
 Let's try to printf a simple sentence.
@@ -271,3 +277,4 @@ Len:[12]
 Unknown:[%r]
 Unknown:[%r]
 alex@ubuntu:~/c/printf$
+```
