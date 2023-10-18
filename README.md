@@ -11,7 +11,7 @@
 
 Write a function that produces output according to a format.
 
-- Prototype: int _printf(const char *format, ...);
+- Prototype: `int _printf(const char *format, ...)`;
 - Returns: the number of characters printed (excluding the null byte used to end output to strings)
 - write output to stdout, the standard output stream
 
@@ -20,11 +20,11 @@ format is a character string. The format string is composed of zero or more dire
 - `s`
 - `%`
 
-- You don’t have to reproduce the buffer handling of the C library printf function
-- You don’t have to handle the flag characters
-- You don’t have to handle field width
-- You don’t have to handle precision
-- You don’t have to handle the length modifiers
+- You don’t have to reproduce the `buffer` handling of the C library printf function
+- You don’t have to handle the `flag` characters
+- You don’t have to handle field `width`
+- You don’t have to handle `precision`
+- You don’t have to handle the `length` modifiers
 
 
 ## `1.` Education is when you read the fine print. Experience is what you get if you don't
@@ -36,10 +36,10 @@ Handle the following conversion specifiers:
 - `d`
 - `i`
 
-- You don’t have to handle the flag characters
-- You don’t have to handle field width
-- You don’t have to handle precision
-- You don’t have to handle the length modifiers
+- You don’t have to handle the `flag` characters
+- You don’t have to handle field `width`
+- You don’t have to handle `precision`
+- You don’t have to handle the `length` modifiers
 
 
 ## `2.` With a face like mine, I do better in print
@@ -82,10 +82,10 @@ Handle the following conversion specifiers:
 - `x`
 - `X`
 
-- You don’t have to handle the flag characters
-- You don’t have to handle field width
-- You don’t have to handle precision
-- You don’t have to handle the length modifiers
+- You don’t have to handle the `flag` characters
+- You don’t have to handle field `width`
+- You don’t have to handle `precision`
+- You don’t have to handle the `length` modifiers
 
 
 ## `4.` Nothing in fine print is ever good news
@@ -140,7 +140,7 @@ Handle the following conversion specifier: `p`.
 
 `#advanced`
 
-Handle the following flag characters for non-custom conversion specifiers:
+Handle the following `flag` characters for non-custom conversion specifiers:
 
 - `+`
 - space (` `)
@@ -151,7 +151,7 @@ Handle the following flag characters for non-custom conversion specifiers:
 
 `#advanced`
 
-Handle the following length modifiers for non-custom conversion specifiers:
+Handle the following `length` modifiers for non-custom conversion specifiers:
 
 - `l`
 - `h`
@@ -163,28 +163,28 @@ Conversion specifiers to handle: `d`, `i`, `u`, `o`, `x`, `X`
 
 `#advanced`
 
-Handle the field width for non-custom conversion specifiers.
+Handle the field `width` for non-custom conversion specifiers.
 
 
 ## `10.` The negative is the equivalent of the composer's score, and the print the performance
 
 `#advanced`
 
-Handle the precision for non-custom conversion specifiers.
+Handle the `precision` for non-custom conversion specifiers.
 
 
 ## `11.` It's depressing when you're still around and your albums are out of print
 
 `#advanced`
 
-Handle the `0` flag character for non-custom conversion specifiers.
+Handle the `0` `flag` character for non-custom conversion specifiers.
 
 
 ## `12.` Every time that I wanted to give up, if I saw an interesting textile, print what ever, suddenly I would see a collection
 
 `#advanced`
 
-Handle the `-` flag character for non-custom conversion specifiers.
+Handle the `-` `flag` character for non-custom conversion specifiers.
 
 
 ## `13`. Print is the sharpest and the strongest weapon of our party
