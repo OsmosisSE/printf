@@ -133,7 +133,7 @@ Handle the following conversion specifier: `p`.
 - You don’t have to handle the `flag` characters
 - You don’t have to handle field `width`
 - You don’t have to handle `precision`
-- You don’t have to handle the length modifiers
+- You don’t have to handle the `length` modifiers
 
 
 ## `7.` The big print gives and the small print takes away
