@@ -1,7 +1,7 @@
 # 0x11. C - printf
 
 
-### C Group project by [-Chukwuebuka-](https://github.com/OsmosisSE) and -Oluwatobiloba-
+### C Group project by [-Chukwuebuka-](https://github.com/OsmosisSE) and [-Oluwatobiloba-](https://github.com/raim-io)
 
 ## `-Tasks-`
 
